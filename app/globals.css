@@ -1,42 +1,128 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Regular.woff2') format('woff2'),
+       url('/fonts/Switzer-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Boska';
+  src: url('/fonts/Boska-Regular.woff2') format('woff2'),
+       url('/fonts/Boska-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.header{
+  width: 100%;
+  height: 872px;
+  position: relative;
+  background-image: url('/images/header_image.png');
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.navBar{
+  width: 100%;
+  height: 91px;
+  display: flex;
+  justify-content: space-between;
+
 }
+
+.dvLogo{
+  padding-top: 24px;
+}
+
+.navItems{
+  display: flex;
+  gap: 40px;
+  margin-right: 64px;
+  padding-top: 34px;
+}
+
+.navPages{
+  display: flex;
+  gap: 40px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%; 
+}
+
+.socialLogos{
+  display: flex;
+  gap: 8px;
+}
+
+.heroContent{
+  width: 776px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  position: absolute;
+  top: 190px;
+  right: 332px; 
+}
+
+.content-text{
+  width: 776px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heroContent h1{
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: rgba(87, 98, 80, 1);
+}
+
+.heroContent :first-child p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(144, 153, 139, 1);
+}
+
+.scroll {
+  width: 37px;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color:rgba(144, 153, 139, 1);
+}
+
+.scroll div{
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+
+.scroll p{
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
