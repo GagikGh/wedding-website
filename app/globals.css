@@ -25,6 +25,7 @@
   height: 872px;
   position: relative;
   background-image: url('/images/header_image.png');
+  overflow-x: hidden;
 }
 
 .navBar{
@@ -126,3 +127,76 @@
 
 }
 
+.ovalDiv{
+  width: 1698px;
+  height: 356px;
+  position: absolute;
+  top: 782px;
+  left: -142px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.locations{
+  width: 1040px;
+  height: 418px;
+  position: absolute;
+  top: 872px;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+
+}
+
+.location-images{
+  width: 1040px;
+  height: 322px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.location-text h2{
+  height: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: rgba(87, 98, 80, 1);
+
+
+}
+
+.location-text{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.location-text p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(184, 193, 178, 1);
+}
+
+.location-card{
+  position: relative;
+}
+
+.location-card span{
+  position: absolute;
+  top: 119px;
+  left: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
+
+}

@@ -54,6 +54,7 @@ export default function Header() {
             </div>                       
         </nav>
         <HeroContent/>
+        <div className='ovalDiv'></div>
         
     </div>
   )
