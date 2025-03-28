@@ -200,3 +200,34 @@
   color: rgba(255, 255, 255, 1);
 
 }
+
+
+
+.sliderVenues{
+  width: 1040px;
+  height: 511px;
+  position: absolute;
+  top: 1338px;
+  left: 200px;
+  border: 1px solid black;
+}
+
+.slider-context h3{
+  font-family: Boska;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -2%;
+  color: rgba(87, 98, 80, 1);
+}
+
+.slider-context p{
+  font-family: Switzer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: rgba(141, 141, 141, 1);
+
+
+}

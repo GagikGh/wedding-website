@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./components/header";
 import Locations from "./components/locations";
-
+import SliderVenues from "./components/sliderVenues";
 
 export default function Home() {
   const locationImages = [
@@ -15,7 +15,9 @@ export default function Home() {
     {image: "/images/Lucca.png", name: "Lucca"},
     {image: "/images/browse-more.png", name: "Browse more"}
     
-  ]
+  ];
+
+  
   return (
     <div className="project">
       <Header/>
@@ -32,8 +34,11 @@ export default function Home() {
                 )
               })}
           </div>   
+
+      </div> 
+      <div className="sliderVenues">
+        <SliderVenues/>
       </div>
-      
       
       
     </div>
