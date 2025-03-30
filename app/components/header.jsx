@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './navbar';
 import Image from 'next/image'
 import HeroContent from './heroContent';
 

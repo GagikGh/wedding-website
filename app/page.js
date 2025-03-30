@@ -3,6 +3,12 @@ import styles from "./page.module.css";
 import Header from "./components/header";
 import Locations from "./components/locations";
 import SliderVenues from "./components/sliderVenues";
+import Services from "./components/services";
+import Portfolio from "./components/portfolio";
+import Testimonial from "./components/testimonial";
+import ContactForm from "./components/contactForm";
+import Maps from "./components/maps";
+import Footer from "./components/footer";
 
 export default function Home() {
   const locationImages = [
@@ -37,8 +43,23 @@ export default function Home() {
 
       </div> 
       <div className="sliderVenues">
+        <p className="slide-name">Featured venues</p>
         <SliderVenues/>
       </div>
+      <Services/>
+      <Portfolio/>
+      <section className="testimonial-section">
+        <Testimonial/>
+      </section>
+      <div className="twodiv">
+        <ContactForm />
+        <Maps />
+      </div>
+      <Footer/>
+      
+        
+
+      
       
       
     </div>

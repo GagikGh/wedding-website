@@ -20,6 +20,8 @@
   padding: 0;
 }
 
+                    /* Header Styles */
+
 .header{
   width: 100%;
   height: 872px;
@@ -125,17 +127,22 @@
   letter-spacing: 0%;
   text-align: center;
 
-}
+} 
+
+      /* Oval Div */
 
 .ovalDiv{
   width: 1698px;
   height: 356px;
   position: absolute;
+  overflow-y: hidden;
   top: 782px;
   left: -142px;
   border-radius: 50%;
   background-color: white;
 }
+
+      /* Locations Styles */
 
 .locations{
   width: 1040px;
@@ -201,33 +208,487 @@
 
 }
 
+ /* First Slider, Slider Venues  */
+
 
 
 .sliderVenues{
   width: 1040px;
   height: 511px;
   position: absolute;
-  top: 1338px;
+  top: 1334px;
   left: 200px;
-  border: 1px solid black;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }
 
-.slider-context h3{
+.slide-context{
+  width: 559px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: "20px";
+  color: "#fff";
+  border-radius: "8px";
+  margin-left: "20px";
+  position: absolute;    top: 32px;
+  right: 72px;
+  text-align: left;
+  
+
+}
+
+.slide-title{
   font-family: Boska;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -2%;
   color: rgba(87, 98, 80, 1);
+  
+
 }
 
-.slider-context p{
+.carousel-root{
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.slide-name{
   font-family: Switzer;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: 0%;
-  color: rgba(141, 141, 141, 1);
+  color: rgba(152, 160, 147, 1);
+}
+
+.slide-status{
+  font-family: Boska;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+letter-spacing: -2%;
+color: rgba(184, 193, 178, 1);
+}
+
+.slide-status span{
+  color: rgba(87, 98, 80, 1);
+}
+
+.slide-place{
+  font-family: Switzer;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+letter-spacing: 0%;
+color: rgba(144, 153, 139, 1);
+}
+
+.slide-info {
+  font-family: Switzer;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+color: rgba(141, 141, 141, 1);
+margin-top: 16px;
+}
+
+                    /* Services Styles */
+
+.services {
+  background-color: #FAFAFA;
+  width: 1100px;
+  height: 317px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;  
+  position: absolute;
+  top: 1949px;
+  left: 170px;
+}
+
+.services-text {
+  margin-bottom: 201px;
+  margin-left: 32px;
+}
+
+.services-title {
+  font-size: 32px;
+  color: #576250;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: #98A093;
+}
+
+.services-container {
+  width: 840px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
 
 
+.service-image {
+  border-radius: 8px;
+}
+
+
+.service-title {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #90998b;
+}
+
+                    /* Portfolios Styles */
+
+.portfolio {
+  position: absolute;
+  left: 200px;
+  top: 2322px;
+}
+
+.portfolio-title {
+  font-size: 20px;
+  color: #98A093;
+  margin-bottom: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 1038px;
+  margin: auto;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto; 
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 171px;
+  text-align: center;
+}
+
+.wedding-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #d9d9d9;
+}
+
+.couple-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+      /* Testimonials Styles */
+
+.testimonial-section{
+  background-color: #585B56;
+  max-width: 1440px;
+  position: absolute;
+  top: 3082px;
+  padding-top: 48px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.testimonial-conainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 554px;
+  gap: 48px;
+}
+
+.div-Testimonials {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.div-Testimonials h2 {
+  color: #ffffff;
+  font-family: Boska;
+  font-family: Boska;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: -2%;
+text-align: center;
+
+  
+}
+
+.div-Testimonials p {
+  color: #B8C1B2;
+  font-family: Switzer;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.testimonial-info{
+  display: flex;
+  flex-direction: column;
+  max-width: 776px;
+  gap: 16px;
+}
+
+.testimonial-info p {
+  color: #FAFAFA;
+  font-family: Switzer;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.testimonial-person{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-direction: column;
+  width: 88px;
+  height: 119px;
+
+}
+
+.testimonial-person p {
+  color: #ffffff;
+  font-family: Switzer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+
+/* Custom arrows positioning */
+.carousel .control-prev,
+.carousel .control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carousel .control-prev {
+  left: 10%;
+}
+
+.carousel .control-next {
+  right: 10%;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .testimonial-section {
+    height: auto;
+    padding: 32px 16px;
+  }
+
+  .div-Testimonials h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .testimonial-info p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .testimonial-person {
+    width: auto;
+    height: auto;
+  }
+
+  .carousel .control-prev {
+    left: 5%;
+  }
+
+  .carousel .control-next {
+    right: 5%;
+  }
+}
+
+
+/* Contact Forms Styles */
+
+.twodiv {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 3636px;
+  justify-content: space-between;
+
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact {
+  width: 480px;
+  height: 738px;
+  margin-left: 200px;
+  margin-top: 56px;
+  font-family: Switzer;
+}
+
+.contact-us {
+  color: #576250;
+  margin-bottom: 4px;
+  font-family: Boska;
+}
+
+.planning {
+  color: #98A093;
+}
+
+.secondform {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactinfo {
+  color: #576250;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.getmarry {
+  color: #576250;
+  margin-top: 24px;
+  margin-bottom: 8px;
+
+}
+
+input {
+  width: 480px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: #D9D9D9;
+  padding-left: 16px;
+}
+
+.sendbutton {
+  margin-top: 24px;
+  width: 160px;
+  height: 44px;
+  background-color: #576250;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Maps Styles */
+
+.map {
+  width: 393px;
+  height: 602px;
+  margin-left: 167px;
+  margin-top: 124px;
+}
+
+.headoffice {
+  color: #576250;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+
+.map-p{
+  color: #90998b;
+}
+
+/* Footer */
+
+.footter {
+  background-color: #424242;
+  width: 100%;
+  height: 80px;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 4486px;
+}
+
+.navbar-footer {
+  display: flex;
+  gap: 40px;
+  margin-top: 28px;
+}
+
+.navbar-footer a{
+  font-family: Switzer;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+color: rgba(141, 141, 141, 1);
+text-decoration: none;
+
+}
+
+.footer-images{
+  display: flex;
+  gap: 8px;
 }
