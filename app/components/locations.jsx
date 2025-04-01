@@ -10,6 +10,7 @@ export default function Locations({location}) {
         alt='place'
         width={248}
         height={153}
+        className='location-card-images'
         priority/>
       <span style={{ fontFamily: 'Switzer, sans-serif' }}>{location.name}</span>
       {location.name === "Browse more" ? <Image
@@ -18,7 +19,8 @@ export default function Locations({location}) {
                                             alt='corner arrow'
                                             width={15}
                                             height={15}                                         
-                                            priority/>: ""}
+                                            priority
+                                            />: ""}
     </div>
    
   )

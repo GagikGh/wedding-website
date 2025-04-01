@@ -107,7 +107,7 @@ const Testimonial = () => {
       onChange={(index) => setCurrentIndex(index)}
     >
       {testimonialSlider.map((item, index) => (
-        <div key={index} className="testimonial-conainer">
+        <div key={index} className="testimonial-container">
           <div className="div-Testimonials">
             <h2>{item.title}</h2>
             <p>{item.beforeTitle}</p>

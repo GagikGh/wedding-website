@@ -12,18 +12,7 @@ export default function HeroContent() {
                 Nibh<br/> urna ut diam fames.
           </p>          
       </div>   
-      <div className={`scroll`}>
-          <div>
-              <Image
-                src="/images/bottom-arrow.png"  
-                alt='bottom-arrow'
-                width={14}
-                height={20}
-                priority
-              />
-          </div>
-          <p style={{ fontFamily: 'Switzer, sans-serif' }}>Scroll</p>
-      </div>
+      
     </div>
   )
 }

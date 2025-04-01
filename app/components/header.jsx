@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 import HeroContent from './heroContent';
 
 
@@ -18,7 +19,7 @@ export default function Header() {
         <nav className='navBar'>
             <div className="dv_logo" style={{ marginTop: '24px', marginLeft: '64px' }}>
                 <Image
-                    src="/images/nav_logo.png"
+                    src="/images/nav_logo.jpg"
                     alt="Logo DV"
                     width={32}
                     height={44}
@@ -27,10 +28,13 @@ export default function Header() {
                 />
             </div>
             <div className='navItems'>
-                <div className={`navPages`} style={{ fontFamily: 'Switzer, sans-serif' }}>
+                <div className={`navPages`} >
                     {navItems.map((item,index) => {
                         return(
-                            <p key={index} >{item}</p>
+
+                            <Link key={index} href={`/some-path/${item}`} className='links'>
+                                {item}
+                            </Link>
                         )
                     })}
                     
@@ -53,8 +57,6 @@ export default function Header() {
             </div>                       
         </nav>
         <HeroContent/>
-        <div className='ovalDiv'></div>
-        
     </div>
   )
 }
