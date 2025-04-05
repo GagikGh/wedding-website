@@ -17,6 +17,7 @@ export default function SliderVenues() {
     {
       img: "/images/Slider.PNG",
       title: "Villa Balbianello",
+      place: "Lake Como",
       info:
 "The whole complex consists of two residential buildings, a church, and a portico (known as Loggia Durini) that can host weddings and events in a truly unique setting. But the special feature of Villa Balbianello is above all the vast garden that surrounds the dwellings, with magnificent holm oaks pruned into an umbrella shape so as to offer a splendid view of Lake Como from inside the... View more"    },
   ];
@@ -46,6 +47,7 @@ export default function SliderVenues() {
           zIndex: 10,
           
         }}
+        className="slider-left-arrow"
         onClick={handlePrev} 
       >
         <img
@@ -69,6 +71,7 @@ export default function SliderVenues() {
           cursor: "pointer",
           zIndex: 10,
         }}
+        className="slider-right-arrow"
         onClick={handleNext} 
       >
         <img
@@ -80,6 +83,8 @@ export default function SliderVenues() {
     );
   };
 
+  
+
   return (
     <Carousel
       showThumbs={false}
@@ -88,18 +93,15 @@ export default function SliderVenues() {
       renderArrowPrev={CustomLeftArrow}
       renderArrowNext={CustomRightArrow}
       showStatus={false}
+      responsive={true}
       selectedItem={currentIndex} 
       onChange={(index) => setCurrentIndex(index)} 
     >
       {sliderImages.map((item, index) => {
         return (
-          <div key={index} style={{ display: "flex", position: "relative" }}>
+          <div key={index}  className="slide-wrapper">
             <img
-              style={{
-                width: "361px",
-                height: "467px",
-                borderRadius: "8px 0px 0px 8px",
-              }}
+              className="slide-image"
               alt=""
               src={item.img}
             />

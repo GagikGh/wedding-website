@@ -22,237 +22,336 @@
 
                     /* Header Styles */
 
-.header{
-  width: 1440px;
-  height: 872px;
+.header {
+  width: 100%;
+  min-height: 872px;
   position: relative;
   background-image: url('/images/header_image.png');
   background-repeat: no-repeat;
+  background-size: cover;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.navBar{
+/* 🟢 NAVIGATION */
+.navBar {
   width: 100%;
   height: 91px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
 }
 
-.dvLogo{
+.dvLogo {
   padding-top: 24px;
 }
 
-.navItems{
+.navItems {
   display: flex;
   gap: 40px;
   margin-right: 64px;
-  padding-top: 34px;
+  padding-top: 34px
 }
 
-.navPages{
+.navPages {
   display: flex;
   gap: 40px;
 }
 
-.links{
+.links {
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
   font-family: Switzer;
   line-height: 24px;
-  letter-spacing: 0%; 
   text-decoration: none;
 }
 
-.socialLogos{
+.socialLogos {
   display: flex;
   gap: 8px;
 }
 
-.heroContent{
-  width: 776px;
-  height: 344px;
+/* 🟢 HERO SECTION */
+.heroContent {
+  width: 90%;
+  max-width: 776px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 56px;
-  position: absolute;
-  top: 190px;
-  right: 332px; 
+  position: relative; /* Վերացնում ենք absolute */
+  margin-top: 100px;
 }
 
-.content-text{
-  width: 776px;
-  height: 234px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.heroContent h1{
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 64px;
-  letter-spacing: -2%;
+.content-text {
+  width: 100%;
+  max-width: 776px;
   text-align: center;
+}
+
+.heroContent h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
   color: rgba(87, 98, 80, 1);
 }
 
-.heroContent :first-child p {
+.heroContent p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
-  text-align: center;
   color: rgba(144, 153, 139, 1);
 }
 
-.scroll {
-  width: 37px;
-  height: 54px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  color:rgba(144, 153, 139, 1);
+/* 🔥 Media Queries for Responsive */
+@media (max-width: 1024px) {
+  .navBar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navItems {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .heroContent h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
-.scroll div{
-  width: 24px;
-  height: 24px;
-  text-align: center;
+@media (max-width: 768px) {
+  .navItems {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .heroContent {
+    margin-top: 60px;
+  }
+
+  .heroContent h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
-.scroll p{
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0%;
-  text-align: center;
+  .navPages {
+    flex-direction: column;
+    align-items: center;
+  }
 
-} 
+  .socialLogos {
+    justify-content: center;
+  }
+}
+
 
 
       /* Locations Styles */
 
-.locations{
-  width: 1040px;
-  height: 418px;
-  position: absolute;
-  top: 872px;
-  left: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  text-align: center;
+      .locations {
+        width: 100%;
+        max-width: 1040px;
+        min-height: 418px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
 
-}
+        
+      }
+      
+      .location-text h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        color: rgba(87, 98, 80, 1);
+      }
+      
+      .location-text p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: rgba(184, 193, 178, 1);
+      }
+      
+      .location-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+      }
+      
+      .location-card {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        max-width: 248px;
+        width: 100%;
+        height: 153px;
+        border-radius: 10px;
+      }
+      
+      .location-card-images {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .location-card:hover .location-card-images {
+        transform: scale(1.1);
+      }
+      
+      .location-card span {
+        position: absolute;
+        top: 119px;
+        left: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 1);
+      }
+      
+      /* 🔥 Media Queries for Responsive */
+      @media (max-width: 1024px) {
+        .location-text h2 {
+          font-size: 28px;
+        }
+      
+        .location-text p {
+          font-size: 14px;
+        }
 
-.location-images{
-  width: 1040px;
-  height: 322px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
+        .location-card span {
+          top: 90px; /* Move it slightly up */
+          left: 10px; /* Adjust position for smaller screens */
+          font-size: 14px; /* Reduce font size */
+        }
+      
+        .location-images {
+          gap: 12px;
+        }
+      
+        .location-card {
+          width: 220px;
+          height: 130px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .location-text h2 {
+          font-size: 24px;
+        }
+      
+        .location-text p {
+          font-size: 14px;
+        }
 
-.location-text h2{
-  height: 40px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -2%;
-  text-align: center;
-  color: rgba(87, 98, 80, 1);
+        @media (max-width: 768px) {
+          .location-card span {
+            top: 70px;
+            left: 8px;
+            font-size: 12px;
+          }
+        }
+      
+        .location-images {
+          gap: 8px;
+        }
+      
+        .location-card {
+          width: 200px;
+          height: 120px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .location-text h2 {
+          font-size: 20px;
+        }
+      
+        .location-text p {
+          font-size: 12px;
+        }
+      
+        .location-card {
+          width: 150px;
+          height: 100px;
+        }
 
-
-}
-
-.location-text{
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.location-text p{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: center;
-  color: rgba(184, 193, 178, 1);
-}
-
-.location-card {
-  position: relative;
-  overflow: hidden; /* Ensures image doesn't expand outside */
-  transition: transform 0.3s ease;
-  width: 248px; /* Ensure consistent size */
-  height: 153px;
-  border-radius: 10px; /* Optional: Add rounded corners */
-}
-
-.location-card-images {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the div */
-  transition: transform 0.3s ease;
-}
-
-.location-card:hover .location-card-images {
-  transform: scale(1.1);
-}
-
-
-
-
-.location-card span{
-  position: absolute;
-  top: 119px;
-  left: 14px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  color: rgba(255, 255, 255, 1);
-
-}
+        .location-card span {
+          top: 50px;
+          left: 6px;
+          font-size: 10px;
+        }
+      }
+      
 
  /* First Slider, Slider Venues  */
 
 
 
-.sliderVenues{
-  width: 1040px;
-  height: 511px;
-  position: absolute;
-  top: 1334px;
-  left: 200px;
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
+ .sliderVenues {
+    max-width: 1040px;
+    width: 100%;
+    max-height: 511px;
+    height: 100%;
+    margin-top: 48px;
+    margin: 48px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
+
+
 .slide-context{
-  width: 559px;
+  width: 100%;
+  max-width: 559px;
   height: 168px;
   display: flex;
   flex-direction: column;
   justify-content:space-between;
   align-items: flex-start;
   gap: 24px;
-  padding: "20px";
-  color: "#fff";
-  border-radius: "8px";
-  margin-left: "20px";
-  position: absolute;    top: 32px;
-  right: 72px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 8px;
+  margin-left: 20px;
   text-align: left;
   
 
+}
+
+.slide-wrapper{
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.slide-image {
+  width: 100%;
+  max-width: 361px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .slide-title{
@@ -313,34 +412,221 @@ color: rgba(141, 141, 141, 1);
 margin-top: 16px;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sliderVenues {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-context {
+    max-width: 90%;
+  }
+
+  .slide-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .slide-wrapper{
+    flex-wrap: nowrap;
+  }
+
+  .slide-image {
+    width: 100%;
+    max-width: 361px;
+    max-height: 467px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderVenues {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 16px;
+    margin-top: 32px;
+  }
+
+  .slide-wrapper{
+    flex-wrap: nowrap;
+  }
+
+  .slide-image {
+    width: 100%;
+    max-width: 361px;
+    max-height: 467px;
+    border-radius: 8px;
+  }
+
+  .slide-context {
+    text-align: center;
+    max-width: 100%;
+
+    padding: 10px;
+   
+  }
+
+  .slide-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .slide-status {
+    font-size: 20px;
+    
+  }
+
+ .slide-info{
+  display: -webkit-box;
+    -webkit-line-clamp: 9;         /* Show 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+ }
+}
+
+
+@media (max-width: 480px) {
+
+  .carousel .slide > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px;
+    height: 568px;
+  }
+
+  
+
+  .sliderVenues{
+    max-width: 361px;
+    height: 568px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 16px;
+    margin-top: 32px;
+    margin-bottom: 200px;
+    
+
+  }
+  
+  
+
+  .slide-image {
+    width: 100%;
+    max-width: 361px;
+    max-height: 229px;
+    border-radius: 8px;
+  }
+
+  .slide-context {
+    margin-top: 0px;
+    margin-left: 0;
+    max-width: 100%;
+    text-align: left;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 80px;
+  }
+
+  
+
+  .slide .selected .previous{
+    max-width: 361px;
+  }
+
+  .carousel{
+    max-width: 361px;
+    position: relative;
+  }
+
+  .slide-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .slide-info {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .slide-status {
+    font-size: 16px;
+  }
+
+  .slider-left-arrow {
+    position: absolute !important;
+    top: 97% !important;  /* Centers the arrow vertically */
+    left: 16px !important;  /* Left-aligned on small screens */
+    transform: translateY(-50%) !important;
+  }
+
+  .slider-right-arrow {
+    top: 97% !important;
+    right: 16px !important;  /* Right-aligned on small screens */
+    transform: translateY(-50%) !important;
+  }
+
+  .slide-wrapper{
+    max-width: 361px;
+    display: flex;
+    gap: 20px;
+    text-wrap: normal;
+  }
+
+  .carousel .slide{
+    max-width: 361px;
+  }
+  
+}
+
+
                     /* Services Styles */
 
 .services {
   background-color: #FAFAFA;
-  width: 1100px;
-  height: 317px;
+  width: 100%;
+  max-width: 1100px;
+  max-height: 317px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;  
-  position: absolute;
-  top: 1949px;
-  left: 170px;
+  margin: 56px auto;
+
 }
 
 .services-text {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 201px;
+  gap: 4px;
   margin-left: 32px;
 }
 
 .services-title {
+  font-family: Boska;
+  font-weight: 700;
   font-size: 32px;
-  color: #576250;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  color:rgba(87, 98, 80, 1);
+
 }
 
 .services-subtitle {
+  font-family: Switzer;
+  font-weight: 400;
   font-size: 16px;
-  color: #98A093;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: rgba(184, 193, 178, 1);
+
 }
 
 .services-container {
@@ -377,15 +663,124 @@ margin-top: 16px;
   color: #90998b;
 }
 
+/* Tablets */
+@media (max-width: 1024px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    height: auto;
+    max-height: none;
+  }
+
+  .services-text {
+    margin: 0 0 24px 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .services-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .service-card {
+    width: 200px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    height: auto;
+    max-height: none;
+  }
+
+  .services-text {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .services-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .service-card {
+    width: 250px;  /* Adjust width for tablet */
+  }
+
+  .service-title {
+    font-size: 18px; /* Slightly bigger font size on tablets */
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    max-width: 100%;
+
+  }
+
+  .services-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .services-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .service-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-title {
+    font-size: 15px;
+  }
+}
+
+
                     /* Portfolios Styles */
 
 .portfolio {
-  position: absolute;
-  left: 200px;
-  top: 2322px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: 0 auto;
+  max-width: 1038px;
 }
 
 .portfolio-title {
@@ -405,6 +800,7 @@ margin-top: 16px;
 }
 
 .portfolio-item {
+  max-width: 512px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -451,14 +847,80 @@ margin-top: 16px;
 
 }
 
+@media (max-width: 1024px) {
+  .portfolio-title {
+    font-size: 18px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns layout for larger tablets */
+  }
+
+  .portfolio-item {
+    max-width: 100%;
+  }
+
+  .overlay {
+    top: 200px; /* Adjust overlay position for larger tablets */
+    left: 20px;  /* Center overlay text */
+    right: 20px;
+  }
+
+  .wedding-text {
+    font-size: 12px;
+  }
+
+  .couple-name {
+    font-size: 22px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 18px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column layout for smaller screens */
+  }
+
+  .portfolio-item {
+    max-width: 100%; /* Make items take full width */
+  }
+
+
+  .wedding-text {
+    font-size: 12px;
+  }
+
+  .couple-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 16px;
+  }
+
+ 
+
+  .wedding-text {
+    font-size: 10px;
+  }
+
+  .couple-name {
+    font-size: 18px;
+  }
+}
+
       /* Testimonials Styles */
 
 .testimonial-section{
   background: rgba(88, 91, 86, 1);
-  width: 1440px;
-  height: 554px;
-  position: absolute;
-  top: 3082px;
+  width: 100%;
+ margin-top: 104px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -566,9 +1028,29 @@ text-align: center;
 
 /* Responsive fixes */
 @media (max-width: 768px) {
-  .testimonial-section {
-    height: auto;
-    padding: 32px 16px;
+  .testimonial-container{
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  
+
+  .carousel-root{
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  .testimonial-container{
+    width: 100%;
+  }
+
+  .carousel .slide{
+    width: 100%;
   }
 
   .div-Testimonials h2 {
@@ -593,18 +1075,56 @@ text-align: center;
   .carousel .control-next {
     right: 5%;
   }
+
+  .testimonial-right-arrow{
+    position: absolute !important;
+    top: 75% !important;  /* Centers the arrow vertically */
+    right: 16px !important;  /* Left-aligned on small screens */
+    transform: translateY(-50%) !important;
+  }
+
+  .testimonial-left-arrow{
+    position: absolute !important;
+    top: 75% !important;  /* Centers the arrow vertically */
+    left: 16px !important;  /* Left-aligned on small screens */
+    transform: translateY(-50%) !important;
+  }
+
 }
+  
+  @media (max-width: 480px){
+.testimonial-container{
+  gap: 30px !important;
+}
+
+    .testimonial-right-arrow{
+      position: absolute !important;
+      top: 77% !important;  /* Centers the arrow vertically */
+      right: 16px !important;  /* Left-aligned on small screens */
+      transform: translateY(-50%) !important;
+    }
+  
+    .testimonial-left-arrow{
+      position: absolute !important;
+      top: 77% !important;  /* Centers the arrow vertically */
+      left: 16px !important;  /* Left-aligned on small screens */
+      transform: translateY(-50%) !important;
+    }
+
+  }
+    
+  
+ 
+
 
 
 /* Contact Forms Styles */
 
 .twodiv {
-  width: 1440px;
-  height: 850px;
+
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 3636px;
+
   justify-content: center;
   align-items: center;
   gap: 167px;
@@ -617,8 +1137,8 @@ text-align: center;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 480px;
-  height: 738px;
+  margin-top: 56px;
+  margin-bottom: 56px;
   font-family: Switzer;
 }
 
@@ -718,8 +1238,10 @@ input {
 /* Maps Styles */
 
 .map {
-  width: 393px;
-  height: 602px;
+  /* width: 393px;
+  height: 602px; */
+  margin-top: 124px;
+  margin-bottom: 124px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -767,23 +1289,102 @@ input {
   gap: 8px;
 }
 
+@media (max-width: 1024px) {
+  .contact {
+    width: 400px; /* Slightly narrower container for tablets */
+    height: auto; /* Adjust height to auto to fit content */
+  }
+
+  .contact-us {
+    font-size: 28px; /* Slightly smaller heading */
+  }
+
+  .forms input, .secondform input {
+    width: 100%; /* Make inputs take full width */
+  }
+
+  .sendbutton {
+    width: 100%; /* Make the button take full width */
+  }
+}
+
+/* For mobile devices (768px and smaller) */
+@media (max-width: 768px) {
+  .twodiv {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    gap: 24px;
+  }
+
+  .contact {
+    width: 100%; /* Make the contact form take full width on small screens */
+    padding: 16px; /* Add some padding */
+  }
+
+  .contact-us {
+    font-size: 24px; /* Adjust heading size */
+    text-align: center;
+  }
+
+  .planning {
+    text-align: center; /* Center the planning text */
+  }
+
+  .forms, .secondform {
+    gap: 12px; /* Increase gap for readability */
+  }
+
+  .forms input, .secondform input {
+    width: 100%; /* Make inputs full width */
+    padding: 12px; /* Add padding for better touch interaction */
+  }
+
+  .sendbutton {
+    width: 100%; /* Full-width button */
+    padding: 16px;
+  }
+}
+
+/* For very small screens (480px and smaller) */
+@media (max-width: 480px) {
+  .contact {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .map{
+    margin: auto;
+  }
+
+  .contact-us {
+    font-size: 20px; /* Smaller font size for smaller screens */
+  }
+
+  .sendbutton {
+    padding: 14px;
+  }
+
+  .forms input, .secondform input {
+    padding: 10px;
+  }
+}
 /* Footer */
+
+
 
 .footter {
   background-color: #424242;
   width: 100%;
-  height: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  position: absolute;
-  top: 4486px;
+  justify-content: center;
+  gap: 241px;
+  align-items: center;
+ 
 }
 
 .navbar-footer {
   display: flex;
   gap: 40px;
-  margin-top: 28px;
 }
 
 .navbar-footer a{
@@ -800,4 +1401,76 @@ text-decoration: none;
 .footer-images{
   display: flex;
   gap: 8px;
+}
+
+@media (max-width: 1024px) {
+  .footter {
+    flex-direction: column; /* Stack items vertically for tablets */
+    align-items: center; /* Center-align items */
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .navbar-footer {
+    gap: 24px; /* Adjust gap between links */
+    margin-top: 16px; /* Space out the navbar links a bit more */
+  }
+
+  .footer-images {
+    gap: 12px; /* Increase gap between social icons */
+    margin-top: 20px; /* Space between social icons */
+  }
+
+  .navbar-footer a {
+    font-size: 14px; /* Slightly smaller font size for mobile/tablet */
+  }
+}
+
+/* For mobile devices (768px and smaller) */
+@media (max-width: 768px) {
+  .footter {
+    flex-direction: column; /* Stack the elements vertically */
+    padding: 16px; /* Padding for mobile */
+  }
+
+  .navbar-footer {
+    gap: 16px; /* Reduce the gap between links */
+    margin-top: 16px;
+    text-align: center; /* Center the text on mobile */
+  }
+
+  .footer-images {
+    gap: 10px; /* Reduce the gap between icons */
+    justify-content: center; /* Center the social media icons */
+  }
+
+  .navbar-footer a {
+    font-size: 14px; /* Smaller font size for better readability on smaller screens */
+  }
+}
+
+/* For very small screens (480px and smaller) */
+@media (max-width: 480px) {
+  .footter {
+    
+    padding: 12px; /* Reduced padding for very small screens */
+  }
+
+  .navbar-footer {
+    gap: 12px; /* Further reduce the gap */
+    margin-top: 12px;
+    text-align: center; /* Center the navigation links */
+  }
+
+  .footer-images {
+    gap: 8px; /* Reduce gap for mobile */
+  }
+
+  .navbar-footer a {
+    font-size: 12px; /* Smallest font size for small screens */
+  }
+
+  .footer-images img {
+    width: 20px;
+    height: 20px; /* Resize icons to fit small screens */
+  }
 }

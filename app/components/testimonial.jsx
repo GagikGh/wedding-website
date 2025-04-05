@@ -55,6 +55,7 @@ const Testimonial = () => {
           cursor: "pointer",
           zIndex: 10,
         }}
+        className="testimonial-left-arrow"
         onClick={onClick}
       >
         <Image
@@ -79,6 +80,7 @@ const Testimonial = () => {
           cursor: "pointer",
           zIndex: 10,
         }}
+        className="testimonial-right-arrow"
         onClick={onClick}
       >
         <Image

@@ -17,7 +17,7 @@ const Footer = () => {
                 <a href="#">Privacy Policy</a>
                 <a href="#">FAQ</a>
             </nav>
-            <div style={{marginTop: 28}} className="footer-images">
+            <div  className="footer-images">
                 <Image
                     src="/images/facebook-logo.jpg"
                     alt="facebook"
