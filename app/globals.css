@@ -992,6 +992,7 @@ margin-top: 16px;
     .portfolio-image{
       width: 100%;
       max-width: 361px;
+      object-fit: cover;
 
       
     }
