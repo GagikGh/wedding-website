@@ -1,7 +1,10 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 import HeroContent from './heroContent';
+import { useState } from 'react';
 
 
 
@@ -9,11 +12,18 @@ export default function Header() {
     
 
     const navItems = ["Browse","Services","Testimonials","Contact us"];
+
     const socialLogos = [
         '/images/facebook-logo.jpg',
         '/images/instagram-logo.jpg',
         '/images/twitter-logo.jpg'
       ];
+
+        const [isOpen, setIsOpen] = useState(false);
+
+        const toggleMenu = () => {
+            setIsOpen(!isOpen);
+        };
   return (
     <div className='header'>
         <nav className='navBar'>
@@ -27,8 +37,13 @@ export default function Header() {
                     
                 />
             </div>
-            <div className='navItems'>
-                <div className={`navPages`} >
+
+            <button className="menu-button" onClick={toggleMenu}>
+                ☰
+            </button>
+
+            <div className={`navItems `}>
+                <div className={`navPages ${isOpen ? 'open' : ''}`} >
                     {navItems.map((item,index) => {
                         return(
 
@@ -56,7 +71,7 @@ export default function Header() {
                 </div>
             </div>                       
         </nav>
-        <HeroContent/>
+        <HeroContent isOpen={isOpen}/>
     </div>
   )
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 
 
-export default function HeroContent() {
+export default function HeroContent({isOpen}) {
   return (
-    <div className='heroContent'>
+    <div className={`heroContent ${isOpen ? 'hide-content' : ''}`}>
       <div className={`content-text`} style={{ fontFamily: 'Boska, serif' }}>
           <h1>Discover your perfect Italian wedding venue</h1>
           <p style={{ fontFamily: 'Switzer, sans-serif' }}>Sagittis adipiscing posuere id adipiscing aliquam posuere.
