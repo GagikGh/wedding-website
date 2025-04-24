@@ -1,14 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Header from "./components/header";
-import Locations from "./components/locations";
-import SliderVenues from "./components/sliderVenues";
-import Services from "./components/services";
-import Portfolio from "./components/portfolio";
-import Testimonial from "./components/testimonial";
-import ContactForm from "./components/contactForm";
-import Maps from "./components/maps";
-import Footer from "./components/footer";
+import Header from "../components/header";
+import Locations from "../components/locations";
+import SliderVenues from "../components/sliderVenues";
+import Services from "../components/services";
+import Portfolio from "../components/portfolio";
+import Testimonial from "../components/testimonial";
+import ContactForm from "../components/contactForm";
+import Maps from "../components/maps";
+import Footer from "../components/footer";
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
   const locationImages = [
@@ -20,13 +19,18 @@ export default function Home() {
     {image: "/images/Siena.png", name: "Siena"},
     {image: "/images/Lucca.png", name: "Lucca"},
     {image: "/images/browse-more.png", name: "Browse more"}
-    
+
   ];
+
+  const t = useTranslations('common');
 
   
   return (
     <div className="project">
       <Header/>
+      <h1>
+        {t('title')}
+      </h1>
       <div className='locations'>
           <div className="location-text">
               <h2 style={{ fontFamily: 'Boska, serif' }}>Locations</h2>
