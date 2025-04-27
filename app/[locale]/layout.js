@@ -2,7 +2,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import "../globals.css"; // adjusted path
-import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,26 +23,12 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }) {
-  console.log('params', await params);
   const locale = await params;
-
-  console.log('locale.locale', locale.locale);
-  // Import messages directly in the component
-  let messages;
-  try {
-    messages = (await import(`../i18n/${locale.locale}.json`)).default;
-    console.log('messages', messages)
-  } catch (error) {
-    console.error(`Could not load messages for locale: ${locale.locale}`, error);
-    messages = {};
-  }
-
-  console.log('locale.locale', locale.locale)
   
   return (
     <html lang={locale.locale} className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <NextIntlClientProvider locale={locale.locale} messages={messages}>
+        <NextIntlClientProvider locale={locale.locale}>
           <div>{children}</div>
         </NextIntlClientProvider>
       </body>
